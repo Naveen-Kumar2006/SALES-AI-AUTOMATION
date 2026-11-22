@@ -4,6 +4,7 @@ import joblib
 import pandas as pd
 from pathlib import Path
 from src.email_alert import send_lead_alert
+from src.whatsapp_msg import send_lead_via_whatsapp
 
 app = FastAPI(title="Sales Automation AI")
 
@@ -44,7 +45,7 @@ def predict_lead(lead: LeadRequest):
     prediction = model.predict(data)
     result = label_encoder.inverse_transform(prediction)[0]
 
-    # Prepare lead details for the email
+    # Prepare lead details for notifications
     lead_details = {
         "Industry": lead.Industry,
         "Company Size": lead.Company_Size,
@@ -54,14 +55,15 @@ def predict_lead(lead: LeadRequest):
         "Budget": lead.Budget
     }
 
-    # Send email alert
+    # Send alerts
     try:
         email_status = send_lead_alert(lead_details, result)
+        whatsapp = send_lead_via_whatsapp(lead_details, result)
 
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=f"Prediction succeeded, but email sending failed: {str(e)}"
+            detail=f"Prediction succeeded, but alert sending failed: {str(e)}"
         )
 
     # Return prediction and email status
