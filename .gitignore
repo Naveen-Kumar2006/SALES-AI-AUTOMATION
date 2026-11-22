@@ -1,2 +1,5 @@
+# Environment variables
 .env
+
+# PyWhatKit logs
 PyWhatKit_DB.txt
