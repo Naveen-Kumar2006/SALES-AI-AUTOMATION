@@ -1,62 +1,69 @@
-🚀 Sales AI Automation
+# 🚀 Sales AI Automation
 
-An ML-powered sales lead qualification demo that uses XGBoost to classify potential customers into HOT, WARM, and COLD categories.
+An ML-powered sales lead qualification demo that uses **XGBoost** to classify potential customers into **HOT, WARM, and COLD** categories based on their details and engagement.
 
-The system integrates FastAPI for predictions and automated email notifications to alert the sales team about high-priority leads.
+The project integrates **FastAPI** for real-time predictions and automated email and WhatsApp notifications to help sales teams prioritize potential customers.
 
-✨ Features
+## ✨ Features
 
 - AI-based lead classification using XGBoost.
 - HOT, WARM, and COLD lead prediction.
 - REST API integration using FastAPI.
 - Automated email alerts for HOT leads.
+- WhatsApp notifications using PyWhatKit.
 - Recommended sales follow-up actions.
 
-🧠 Model Performance
+## 🧠 Model Performance
 
-Metric| Result
-Accuracy| 85%
-HOT Recall| 100%
+| Metric | Result |
+|---|---:|
+| Accuracy | 85% |
+| HOT Recall | 100% |
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Python • XGBoost • Scikit-learn • Pandas • FastAPI • SMTP
+Python • XGBoost • Scikit-learn • Pandas • FastAPI • SMTP • PyWhatKit
 
-🔄 Workflow
+## 🔄 Workflow
 
+```text
 Sales Lead Data
-      ↓
+       ↓
 Data Preprocessing
-      ↓
+       ↓
 XGBoost Model
-      ↓
+       ↓
 Lead Classification
-      ↓
+       ↓
 HOT / WARM / COLD
-      ↓
-Automated Email Alert
-(HOT Leads)
+       ↓
+Automated Notifications
+       ↓
+Email & WhatsApp Alerts
+```
 
-📧 Email Automation Demo
+## 📧 Notification Demo
 
-When a HOT lead is identified, the system automatically sends an email notification to the sales team with:
+When a HOT lead is identified, the system sends an automated notification to the sales team containing:
 
 - Lead information
 - Predicted category
 - Priority level
-- Recommended action
+- Recommended follow-up action
 
-⚠️ Project Scope
+## ⚠️ Project Scope
 
-This is a demonstration project showcasing Machine Learning, REST API integration, and email automation. It is not a production-ready sales platform.
+This project is developed **for learning and demonstration purposes only** to showcase Machine Learning, REST API integration, and notification automation. It is not a production-ready sales platform.
 
-👨‍💻 Author
+WhatsApp notifications currently use PyWhatKit for local WhatsApp Web automation.
 
-Naveen Kumar T
+## 👨‍💻 Author
+
+**Naveen Kumar T**
 
 B.Tech – Artificial Intelligence and Data Science
 
-- GitHub: "Naveen-Kumar2006" (https://github.com/Naveen-Kumar2006)
+GitHub: [Naveen-Kumar2006](https://github.com/Naveen-Kumar2006)
 
 ---
 
